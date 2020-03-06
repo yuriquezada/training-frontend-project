@@ -15,9 +15,7 @@ function App() {
           href='https://reactjs.org'
           rel='noopener noreferrer'
           target='_blank'>
-          {krowdy}
-          {krowdy}
-          {krowdy}
+          Krowdy
         </a>
       </header>
     </div>
