@@ -16,6 +16,8 @@ function App() {
           rel='noopener noreferrer'
           target='_blank'>
           {krowdy}
+          {krowdy}
+          {krowdy}
         </a>
       </header>
     </div>
