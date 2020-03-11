@@ -1,23 +1,22 @@
 import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { TextField, Typography } from '@material-ui/core'
+import Title from './Title'
+import SubTitle from './SubTitle'
 
 function App() {
+  const [ title, setTitle ] = React.useState('')
+  const [ subTitle, setSubTitle ] = React.useState('')
+
+  const { REACT_APP_SITE } = process.env
+
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img alt='logo' className='App-logo' src={logo} />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          rel='noopener noreferrer'
-          target='_blank'>
-          Krowdy
-        </a>
-      </header>
+      <Typography>{REACT_APP_SITE}</Typography>
+      <TextField onChange={ev => setTitle(ev.target.value)} value={title} />
+      <TextField onChange={ev => setSubTitle(ev.target.value)} value={subTitle} />
+      <Title title={title} />
+      <SubTitle subTitle={subTitle} />
+      {/* <SubTitle user={user} /> */}
     </div>
   )
 }
